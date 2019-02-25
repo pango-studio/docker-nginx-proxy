@@ -1,0 +1,25 @@
+version: "3"
+services:
+  # The nginx proxy server container. This allows you to Map virtual domains to the nginx server like example.local
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    # Maps http & https ports
+    ports:
+      - 80:80
+      - 443:443
+    # Maps volumes to local folders
+    volumes:
+      - /Users/Chris/Sites/nginx-proxy/certs:/etc/nginx/certs
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  # The adminer container. This will Map adminer to the port 127.0.0.1:8080 so you can access and engage with SQL DBs
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+  # Set up the network that the WP containers will use
+networks:
+  default:
+    external:
+      name: nginx-proxy
