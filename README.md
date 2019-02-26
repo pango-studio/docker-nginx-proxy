@@ -3,7 +3,8 @@ Boilerplate for Nginx-proxy server for a Docker container
 
 Reference: https://blog.ssdnodes.com/blog/host-multiple-websites-docker-nginx/ 
 
-###Prerequisites:
+### Prerequisites:
+
 Install Docker Desktop for Mac - https://docs.docker.com/docker-for-mac/install/ 
 Install Brew Open SSL (for self signed ssl certs)
  $ brew install openssl
