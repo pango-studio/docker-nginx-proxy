@@ -6,7 +6,9 @@ Reference: https://blog.ssdnodes.com/blog/host-multiple-websites-docker-nginx/
 ### Prerequisites:
 
 Install Docker Desktop for Mac - https://docs.docker.com/docker-for-mac/install/ 
+
 Install Brew Open SSL (for self signed ssl certs)
+
  $ brew install openssl
 
 ## Set up Nginx-proxy
@@ -48,11 +50,13 @@ openssl req \
 ### Allow the local domains to map to your local IP address
 
 You need to edit your /etc/hosts file to add the local mappings of custom dev urls
-In terminal go to the etc directory
+In terminal go to the etc directory:
+
 $ cd /private/etc
 $ sudo vim hosts
 
 Add your new local domains like lms.local & example.local below
+
 127.0.0.1   localhost
 127.0.0.1   example.local
 127.0.0.1   lms.local
