@@ -62,7 +62,7 @@ Add your new local domains like lms.local & example.local below
 
 127.0.0.1   localhost \
 127.0.0.1   example.local \
-127.0.0.1   lms.local \
+127.0.0.1   lms.local 
 
 .. your local domains are mapped
 
