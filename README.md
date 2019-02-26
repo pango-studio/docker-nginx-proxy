@@ -44,6 +44,9 @@ openssl req \
         <(printf '[SAN]\nsubjectAltName=DNS:example.local')) \
     -sha256 \
     -days 3650
+    
+#### Mark as trusted
+NB: You need to add the new .crt to your System keychain and mark as trusted.
 
 .. Your certs are set up!
 
